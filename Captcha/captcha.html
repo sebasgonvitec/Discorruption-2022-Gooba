@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <!-- Link al css -->
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+
+    <body>
+        <div class="center">
+            <!-- Titulo del captcha -->
+            <h1 id="captchaHeader">CAPTCHA</h1>
+            <div id="captchaBackground">
+                <!-- Texto del captcha -->
+                <canvas id="captcha">captcha text</canvas>
+                <!-- Textbox donde el usuario escribe el captcha -->
+                <input id="textBox" type="text" name="text">
+                <div id="buttons">
+                    <!-- Boton para ingresar la informacion y checar si esta bien -->
+                    <input id="submitButton" type="submit">
+                    <!-- Boton para volver a cargar el captcha -->
+                    <button id="refreshButton" type="submit">Refresh</button>
+                </div>
+                <!-- Display del output de acuerdo a lo ingresado -->
+                <span id="output"></span>
+            </div>
+        </div>
+        <!-- Link al script -->
+        <script src="script.js"></script>
+    </body>
+</html>
