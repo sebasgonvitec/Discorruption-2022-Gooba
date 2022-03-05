@@ -30,13 +30,14 @@ var c = emptyArr.join('');
 
 ctx.fillText(emptyArr.join(''), captchaText.width/4, captchaText.height/2);
 
-// Cuando se presiona el boton de "Enter", se valida el captcha y se muestra la respuesta apropiada
+// Cuando se presiona el boton de "Enter", se valida el captcha y se muestra la respuesta apropiada, y se redirecciona a otra página html
 userText.addEventListener('keyup', function(e) {
     // Valor del boton "Enter" es 13
     if (e.keyCode === 13) {
         if (userText.value === c) {
             output.classList.add("correctCaptcha");
             output.innerHTML = "Correct!";
+            window.location.href = "HTML DE LA PAGINA";
         } else {
             output.classList.add("incorrectCaptcha");
             output.innerHTML = "Incorrect, please try again";
@@ -44,11 +45,12 @@ userText.addEventListener('keyup', function(e) {
     }
 });
 
-//Cuando se hace click en submit, se valida el captcha y se muestra la respuesta apropiada
+//Cuando se hace click en submit, se valida el captcha y se muestra la respuesta apropiada, y se redirecciona a otra página html
 submitButton.addEventListener('click', function() {
     if (userText.value === c) {
         output.classList.add("correctCaptcha");
         output.innerHTML = "Correct!";
+        window.location.href = "HTML DE LA PAGINA";
     } else {
         output.classList.add("incorrectCaptcha");
         output.innerHTML = "Incorrect, please try again";
